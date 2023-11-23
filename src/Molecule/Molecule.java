@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Molecule {
 
-    private static int NBMOLECULE = 0;
+    public static int NBMOLECULE = 0;
     private int id;
     private String nom;
     private List<Integer> activites;
-    private List<Integer> numPharmacophores;
+    private List<Integer> idPharmacophores;
 
     /***
      * Constructeur vide d'une molecule
@@ -18,7 +18,7 @@ public class Molecule {
         this.id = nextid();
         this.nom = "";
         this.activites = new ArrayList<>();
-        this.numPharmacophores = new ArrayList<>();
+        this.idPharmacophores = new ArrayList<>();
     }
 
     /***
@@ -29,7 +29,7 @@ public class Molecule {
         this.id = nextid();
         this.nom = nom;
         this.activites = new ArrayList<>();
-        this.numPharmacophores = new ArrayList<>();
+        this.idPharmacophores = new ArrayList<>();
     }
 
     /***
@@ -76,16 +76,16 @@ public class Molecule {
      * Recupère la liste de tous les numéros de pharmacophores de la molecule
      * @return La liste des numéros de pharmacophores
      */
-    public List<Integer> getNumPharmacophores() {
-        return numPharmacophores;
+    public List<Integer> getIdPharmacophores() {
+        return idPharmacophores;
     }
 
     /***
      * Assigne une nouvelle liste de numéros de pharmacophores
-     * @param numPharmacophores La nouvelle liste de numéros de pharmacophores
+     * @param idPharmacophores La nouvelle liste de numéros de pharmacophores
      */
-    public void setNumPharmacophores(List<Integer> numPharmacophores) {
-        this.numPharmacophores = numPharmacophores;
+    public void setIdPharmacophores(List<Integer> idPharmacophores) {
+        this.idPharmacophores = idPharmacophores;
     }
 
     /***
@@ -101,7 +101,7 @@ public class Molecule {
      * @param numPharmacophore Le numéro à ajouter
      */
     public void addNextPharcophores(int numPharmacophore){
-        this.numPharmacophores.add(numPharmacophore);
+        this.idPharmacophores.add(numPharmacophore);
     }
 
     /***

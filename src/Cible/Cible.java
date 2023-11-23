@@ -2,12 +2,16 @@ package src.Cible;
 
 public class Cible {
 
-    private static int NBCIBLE = 0;
+    public static int NBCIBLE = 0;
     private int id;
     private String family;
     private String protein;
     private String description;
     private String assay;
+
+    /***
+     * Constructeur vide pour les cibles
+     */
     public Cible(){
         this.id = nextid();
         this.assay = "";
@@ -16,6 +20,13 @@ public class Cible {
         this.family = "";
     }
 
+    /***
+     * Constructeur de cibles
+     * @param assay L'assay de la cible
+     * @param description La description de la cible
+     * @param protein La protein de la cible
+     * @param family La famille de la cible
+     */
     public Cible(String assay,String description,String protein,String family){
         this.id = nextid();
         this.assay = assay;
@@ -94,6 +105,22 @@ public class Cible {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /***
+     * Permet de récupérer l'ID de la cible
+     * @return L'ID de la molecule
+     */
+    public int getId() {
+        return id;
+    }
+
+    /***
+     * Permet de modifier l'ID de la cible
+     * @param id la nouvelle ID
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
 }
