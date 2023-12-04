@@ -1,6 +1,7 @@
 package src.Pharmacophore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Pharmacophore {
@@ -9,7 +10,7 @@ public class Pharmacophore {
     private int id;
     private String pattern;
     private int support;
-    private List<Integer> activites;
+    private HashMap<Integer,Float> activites;
     private List<Integer> idMolecules;
 
     /***
@@ -31,7 +32,7 @@ public class Pharmacophore {
         this.pattern = pattern;
         this.support = support;
         this.idMolecules = new ArrayList<>();
-        this.activites = new ArrayList<>();
+        this.activites = new HashMap<>();
     }
 
     /***
@@ -86,7 +87,7 @@ public class Pharmacophore {
      * Recupère la liste de toutes les activités de la molecule
      * @return La liste des activités
      */
-    public List<Integer> getActivites() {
+    public HashMap<Integer,Float> getActivites() {
         return activites;
     }
 
@@ -94,7 +95,7 @@ public class Pharmacophore {
      * Assigne une nouvelle liste d'activités
      * @param activites La nouvelle liste d'activités
      */
-    public void setActivites(List<Integer> activites) {
+    public void setActivites(HashMap<Integer,Float> activites) {
         this.activites = activites;
     }
 
@@ -115,11 +116,11 @@ public class Pharmacophore {
     }
 
     /***
-     * Ajoute une valeur en fin de liste des activités
+     * Ajoute une valeur en fin de la hashmap des activités
      * @param valActivite La valeur à ajouter
      */
-    public void addNextActivites(int valActivite){
-        this.activites.add(valActivite);
+    public void addNextActivites(float valActivite){
+        this.activites.put(activites.size(),valActivite);
     }
 
     /***
