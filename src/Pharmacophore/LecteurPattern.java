@@ -21,7 +21,7 @@ public class LecteurPattern {
     }
 
     /***
-     * Permet de lire tout le fichier pour rentrer les données dans la classe
+     * Permet de lire tout le fichier pour rentrer les données dans la classe et créer les pharmacophores
      */
     private void initInfo() throws FileNotFoundException {
         try {
@@ -107,5 +107,9 @@ public class LecteurPattern {
      */
     public File getFile() {
         return file;
+    }
+
+    public Pharmacophore getPharmacophoreFromID(int id){
+        return this.pharmacophores.get(id);
     }
 }

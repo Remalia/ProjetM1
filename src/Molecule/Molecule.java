@@ -8,7 +8,7 @@ public class Molecule {
     public static int NBMOLECULE = 0;
     private int id;
     private String nom;
-    private List<Integer> activites;
+    private List<Float> activites;
     private List<Integer> idPharmacophores;
 
     /***
@@ -60,7 +60,7 @@ public class Molecule {
      * Recupère la liste de toutes les activités de la molecule
      * @return La liste des activités
      */
-    public List<Integer> getActivites() {
+    public List<Float> getActivites() {
         return activites;
     }
 
@@ -68,7 +68,7 @@ public class Molecule {
      * Assigne une nouvelle liste d'activités
      * @param activites La nouvelle liste d'activités
      */
-    public void setActivites(List<Integer> activites) {
+    public void setActivites(List<Float> activites) {
         this.activites = activites;
     }
 
@@ -92,7 +92,7 @@ public class Molecule {
      * Ajoute une valeur en fin de liste des activités
      * @param valActivite La valeur à ajouter
      */
-    public void addNextActivites(int valActivite){
+    public void addNextActivites(Float valActivite){
         this.activites.add(valActivite);
     }
 
